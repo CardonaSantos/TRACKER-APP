@@ -42,6 +42,10 @@ function Login() {
         type: "error",
         text1: getApiErrorMessageAxios(error),
       });
+    } finally {
+      Toast.show({
+        text1: "ENVIADO",
+      });
     }
   };
 
