@@ -6,7 +6,11 @@ interface AppTextProps {
   children: ReactNode;
   style?: StyleProp<TextStyle>;
 }
-
+/**
+ * Para tipografia consistente con el theme
+ * @param param0
+ * @returns
+ */
 export function AppText({ children, style }: AppTextProps) {
   const theme = useTheme();
 

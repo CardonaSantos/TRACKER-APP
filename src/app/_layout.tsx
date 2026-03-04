@@ -4,6 +4,7 @@ import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { Stack } from "expo-router";
 import { useState } from "react";
 import { Provider as PaperProvider } from "react-native-paper";
+import Toast from "react-native-toast-message";
 
 function AppProviders() {
   const { theme } = useThemeMode();
@@ -41,6 +42,7 @@ export default function RootLayout() {
       <ThemeProvider>
         <AppProviders />
       </ThemeProvider>
+      <Toast autoHide position="bottom" />
     </QueryClientProvider>
   );
 }

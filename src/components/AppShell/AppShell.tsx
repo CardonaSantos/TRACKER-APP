@@ -1,3 +1,4 @@
+import { useAuth } from "@/auth/auth-store";
 import { useThemeMode } from "@/Context/Theme/theme-store";
 import React, { useEffect, useRef, useState } from "react";
 import {
@@ -14,6 +15,7 @@ import {
   View,
 } from "react-native";
 import { Button, useTheme } from "react-native-paper";
+import UserMenu from "../logout/logout-menu";
 import { AppContainer } from "../reusable/AppContainer";
 import { AppSurface } from "../reusable/AppSurface";
 import { AppText } from "../reusable/AppText";
@@ -387,6 +389,7 @@ export default function AppShell({
   toolbarRight,
 }: AppShellProps) {
   const theme = useTheme();
+  const { user } = useAuth();
 
   const { toggleTheme } = useThemeMode();
   const [sidebarOpen, setSidebarOpen] = useState(false);
@@ -474,7 +477,7 @@ export default function AppShell({
                 { backgroundColor: theme.colors.primary },
               ]}
             >
-              <AppText style={styles.avatarInitial}>U</AppText>
+              <UserMenu />
             </View>
           )}
         </View>

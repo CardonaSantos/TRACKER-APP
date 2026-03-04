@@ -6,6 +6,9 @@ export const crmEndpoints = {
     base: "/users",
     byId: (id: string | number) => `/users/${id}`,
   },
+  profile: {
+    byId: (id: string | number) => `/user/user-profile-info/${id}`,
+  },
   tracking: {
     sendLocation: "/tracking/location",
   },

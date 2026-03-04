@@ -8,7 +8,11 @@ interface AppSurfaceProps {
   style?: StyleProp<ViewStyle>;
   elevation?: ElevationLevels; // De que tipo es? ENUM
 }
-
+/**
+ * para tarjetas o bloques visuales, con sombra o elevacion
+ * @param param0
+ * @returns
+ */
 export function AppSurface({ children, style, elevation }: AppSurfaceProps) {
   return (
     <Surface elevation={elevation} style={[styles.surface, style]}>

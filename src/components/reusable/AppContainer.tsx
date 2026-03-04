@@ -8,6 +8,11 @@ interface AppContainerProps {
   padded?: boolean;
 }
 
+/**
+ * LAYOUT DE PANTALLA, NO SE ENCARGA DE NADA ESPECIFICO
+ * @param param0
+ * @returns
+ */
 export function AppContainer({
   children,
   style,
