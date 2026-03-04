@@ -5,6 +5,7 @@ export default function Maps() {
   return (
     <View>
       <Text>Maps</Text>
+      <View className="google-map-code"></View>
     </View>
   );
 }

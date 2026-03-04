@@ -1,7 +1,21 @@
-import { Stack } from "expo-router";
-import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
-import { useState } from "react";
 import { AuthProvider } from "@/auth/auth-store";
+import { ThemeProvider, useThemeMode } from "@/Context/Theme/theme-store";
+import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
+import { Stack } from "expo-router";
+import { useState } from "react";
+import { Provider as PaperProvider } from "react-native-paper";
+
+function AppProviders() {
+  const { theme } = useThemeMode();
+
+  return (
+    <PaperProvider theme={theme}>
+      <AuthProvider>
+        <Stack screenOptions={{ headerShown: false }} />
+      </AuthProvider>
+    </PaperProvider>
+  );
+}
 
 export default function RootLayout() {
   const [queryClient] = useState(
@@ -24,9 +38,9 @@ export default function RootLayout() {
 
   return (
     <QueryClientProvider client={queryClient}>
-      <AuthProvider>
-        <Stack screenOptions={{ headerShown: false }} />
-      </AuthProvider>
+      <ThemeProvider>
+        <AppProviders />
+      </ThemeProvider>
     </QueryClientProvider>
   );
 }
