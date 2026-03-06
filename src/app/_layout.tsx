@@ -1,5 +1,6 @@
 import { AuthProvider } from "@/auth/auth-store";
 import { ThemeProvider, useThemeMode } from "@/Context/Theme/theme-store";
+import "@/Tasks/real-time-location/locationTask";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { Stack } from "expo-router";
 import { useState } from "react";

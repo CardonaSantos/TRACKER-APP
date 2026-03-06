@@ -23,8 +23,10 @@
         "ACCESS_FINE_LOCATION",
         "ACCESS_BACKGROUND_LOCATION",
         "FOREGROUND_SERVICE",
-        "FOREGROUND_SERVICE_LOCATION"
-      ]
+        "FOREGROUND_SERVICE_LOCATION",
+        "WAKE_LOCK"
+      ],
+      "package": "com.cardonasantos.trackercrm"
     },
     "web": {
       "output": "static",
@@ -55,6 +57,12 @@
     "experiments": {
       "typedRoutes": true,
       "reactCompiler": true
+    },
+    "extra": {
+      "router": {},
+      "eas": {
+        "projectId": "3262bb76-256d-46b6-b7b0-c2ea88b7e579"
+      }
     }
   }
 }

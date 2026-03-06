@@ -1,6 +1,6 @@
 {
   "name": "tracker-crm",
-  "main": "expo-router/entry",
+  "main": "index.js",
   "version": "1.0.0",
   "scripts": {
     "start": "expo start",
@@ -21,6 +21,7 @@
     "expo": "~55.0.4",
     "expo-battery": "~55.0.8",
     "expo-constants": "~55.0.7",
+    "expo-dev-client": "~55.0.11",
     "expo-device": "~55.0.9",
     "expo-font": "~55.0.4",
     "expo-glass-effect": "~55.0.7",
